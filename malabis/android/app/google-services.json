@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1002906374906",
+    "project_id": "malabis-f5b20",
+    "storage_bucket": "malabis-f5b20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1002906374906:android:60decc8126868f8b52af43",
+        "android_client_info": {
+          "package_name": "com.ralfiz.malabis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1002906374906-fpr1m68ruu7vmm13glv3lknqhrmn263r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttFtOx355F7x6GuajwDABHc5ltH-X7ik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1002906374906-fpr1m68ruu7vmm13glv3lknqhrmn263r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
