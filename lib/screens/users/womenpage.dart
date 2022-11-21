@@ -6,6 +6,7 @@ import 'package:malabis/models/productsGirls.dart';
 import 'package:malabis/models/productsMen.dart';
 import 'package:malabis/models/productsWomen.dart';
 import 'package:malabis/screens/customizeorderPage.dart';
+import 'package:malabis/screens/users/feedbackPage.dart';
 
 import '../models/productsBoys.dart';
 
@@ -30,12 +31,26 @@ class _WomenPageState extends State<WomenPage> {
 
   var type;
 
+
   @override
   Widget build(BuildContext context) {
 
     return  Scaffold(
 
+appBar: AppBar(
 
+title:Text("Women",style:TextStyle(color:Colors.black,fontWeight:FontWeight.w600,fontSize:18)) ,
+  actions: [
+
+    Padding(padding: EdgeInsets.all(15),child: InkWell(
+      onTap: (){
+
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>FeedBackPage(uid: widget.shopid,)));
+      },
+      child: Text("Feedback"),
+    ),)
+  ],
+),
 
       body: SingleChildScrollView(
         child: Column(
@@ -49,21 +64,7 @@ class _WomenPageState extends State<WomenPage> {
 
 
 
-            Container(
 
-              padding: EdgeInsets.only(left: 20,right: 10,top: 30),
-              width: MediaQuery.of(context).size.width,
-
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Welcome",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                  SizedBox(width: 10,),
-                  Text(widget.name,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),)
-
-                ],
-              ),
-            ),
 
             // Padding(
             //   padding: const EdgeInsets.only(left: 20,top: 40),
@@ -76,10 +77,7 @@ class _WomenPageState extends State<WomenPage> {
 
 
 
-            Padding(
-              padding: const EdgeInsets.only(left: 20,top: 40),
-              child: Text("Women",style:TextStyle(color:Colors.black,fontWeight:FontWeight.w600,fontSize:18)),
-            ),
+
 
             Container(
               // color: Color(0xffFAD4D4),

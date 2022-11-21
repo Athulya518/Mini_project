@@ -60,10 +60,8 @@ class _ViewpreviousOrdersState extends State<ViewpreviousOrders> {
                               type: snapshot.data!.docs[index]['type'],
                               category: snapshot.data!.docs[index]['category'],
                               phone: snapshot.data!.docs[index]['userphone'],
-                              neckdesign: snapshot.data!.docs[index]['neckdesign'],
-                              wristdesign: snapshot.data!.docs[index]['wristdesign'],
-                              collardesign: snapshot.data!.docs[index]['collardesign'],
-                              designimgurl: snapshot.data!.docs[index]['designimgurl'],
+
+
                               measurement: snapshot.data!.docs[index]['measurement'],
                               shoporpickup: snapshot.data!.docs[index]['shoporpickup'],
                               pickupaddress: snapshot.data!.docs[index]['pickupaddress'],

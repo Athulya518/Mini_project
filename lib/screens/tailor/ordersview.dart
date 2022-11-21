@@ -83,12 +83,7 @@ class _OrdersViewState extends State<OrdersView> {
                                           ['category'],
                                           phone: snapshot.data!.docs[index]
                                           ['userphone'],
-                                          neckdesign: snapshot.data!.docs[index]
-                                          ['neckdesign'],
-                                          wristdesign: snapshot
-                                              .data!.docs[index]['wristdesign'],
-                                          collardesign: snapshot.data!
-                                              .docs[index]['collardesign'],
+
                                           designimgurl: snapshot.data!
                                               .docs[index]['designimgurl'],
                                           measurement: snapshot

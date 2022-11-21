@@ -6,6 +6,7 @@ import 'package:malabis/models/productsGirls.dart';
 import 'package:malabis/models/productsMen.dart';
 import 'package:malabis/models/productsWomen.dart';
 import 'package:malabis/screens/customizeorderPage.dart';
+import 'package:malabis/screens/users/feedbackPage.dart';
 
 import '../models/productsBoys.dart';
 
@@ -34,7 +35,19 @@ class _BoyPageState extends State<BoyPage> {
   Widget build(BuildContext context) {
 
     return  Scaffold(
+      appBar: AppBar(
+        title: Text("Boys"),
+        actions: [
 
+          Padding(padding: EdgeInsets.all(15),child: InkWell(
+            onTap: (){
+
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>FeedBackPage(uid: widget.shopid,)));
+            },
+            child: Text("Feedback"),
+          ),)
+        ],
+      ),
 
 
       body: SingleChildScrollView(

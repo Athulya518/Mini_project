@@ -93,34 +93,7 @@ class _TailorViewPreviousOrderState extends State<TailorViewPreviousOrder> {
 
                   ),
 
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.all(10),
-                    color: Color(0xfffad4d4),
-                    child: Center(child:
-                    widget.neckdesign!=null?
-                    Text("Neck Style : "+widget.neckdesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),): Text("Neck Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),
 
-                  ),
-
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.all(10),
-                    color: Color(0xfffad4d4),
-                    child: Center(child:widget.wristdesign!=null? Text("Wrist Style : "+widget.wristdesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),):Text("Wrist Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),),
-
-
-
-                  Container(
-                    height: 50,
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.all(10),
-                    color: Color(0xfffad4d4),
-                    child: Center(child:widget.collardesign!=null? Text("Collar Style : "+widget.collardesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),):Text("Collar Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),
-
-                  ),
                   Container(
                     height: 50,
                     width: MediaQuery.of(context).size.width,

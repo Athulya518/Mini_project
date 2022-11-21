@@ -64,9 +64,7 @@ class _CodDateforshopmaterialState extends State<CodDateforshopmaterial> {
                           return;
                         setState(()=>date=newDate);
                       },
-
                     ),
-
                   ),
                 ),
 
@@ -74,6 +72,7 @@ class _CodDateforshopmaterialState extends State<CodDateforshopmaterial> {
                 Text("${date.year}/${date.month}/${date.day}",
                   style:TextStyle(fontSize: 32,color: Colors.black),
                 ),
+
 
 
                 Padding(

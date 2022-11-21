@@ -43,6 +43,7 @@ dependencies:
   url_launcher:
   image_picker:
   uuid:
+  flutter_credit_card: ^3.0.4
 
 dev_dependencies:
   flutter_test:

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:malabis/screens/homepage.dart';
 import 'package:malabis/screens/loginscreen.dart';
+import 'package:malabis/screens/users/feedbackPage.dart';
 import 'package:malabis/screens/users/homepage_user.dart';
 import 'package:malabis/screens/users/myorders.dart';
 import 'package:malabis/screens/users/profile.dart';
@@ -87,17 +88,30 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
                 decoration: BoxDecoration(color: Colors.white60),
                 accountName: Text(widget.name), accountEmail: Text(widget.email),
 
-                currentAccountPicture: CircleAvatar(backgroundColor: Colors.grey,child: Text("S",style: TextStyle(fontSize: 40),),),
+                currentAccountPicture: CircleAvatar(backgroundColor: Colors.grey,child: Text(widget.name[0].toUpperCase(),style: TextStyle(fontSize: 40),),),
 
               ),
               // ListTile(leading:Icon(Icons.logout),title: Text("Logout"),
               //   onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));},
               // ),
-             ListTile(leading:Icon(Icons.feedback),title:Text("Feedback")),
-             ListTile(
-
-                 onTap: (){},
-                 leading:Icon(Icons.history),title:Text("View Orders"))
+             // ListTile(
+             //
+             //
+             //   onTap: (){
+             //
+             //
+             //
+             //   },
+             //
+             //
+             //     leading:Icon(Icons.feedback),title:Text("Feedback")),
+             // ListTile(
+             //
+             //     onTap: (){
+             //
+             //
+             //     },
+             //     leading:Icon(Icons.history),title:Text("View Orders"))
 
               ],),
           ),

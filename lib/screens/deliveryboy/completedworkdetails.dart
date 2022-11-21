@@ -36,10 +36,12 @@ class CompletedWorkDetails extends StatefulWidget {
   var dboyid;
 
 
+
   CompletedWorkDetails(
       {Key? key,
         this.dboyassigned,this.dboyid,
       this.type,
+
       this.category,
       this.phone,
       this.fabrictype,
@@ -310,7 +312,7 @@ Padding(
 ),
 
 
-                      Container(
+                     widget.paymentmode=="COD"? Container(
                         padding: const EdgeInsets.only(top: 20.0,left:20,right: 20),
 
                         child: Center(child:
@@ -335,7 +337,11 @@ Padding(
                           ),
 
                         )),
-                      ),
+                      ):Container(
+                         padding: const EdgeInsets.only(top:15,left:20,right: 20),
+
+
+                         child: Text("Online Payment: Already Paid")),
                       Container(
                         padding: const EdgeInsets.only(top: 20.0,left:20,right: 20),
 

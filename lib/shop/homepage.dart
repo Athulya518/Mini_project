@@ -7,6 +7,7 @@ import 'package:malabis/screens/admin/viewpayments.dart';
 import 'package:malabis/screens/admin/viewtailors.dart';
 import 'package:malabis/screens/loginscreen.dart';
 import 'package:malabis/shop/viewallorders.dart';
+import 'package:malabis/shop/viewfeedbacks.dart';
 class ShopHomePage extends StatefulWidget {
   var uid;
   var name;
@@ -161,7 +162,23 @@ class _ShopHomePageState extends State<ShopHomePage> {
                   ),
                 ),
               ),
-              SizedBox(height: 60,),
+              SizedBox(height: 20,),
+              Center(
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ViewFeedbacks(
+                      shopid: widget.shopid,
+                    )));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(left: 40,right: 40),
+
+                    height: 75,
+                    child: Center(child: Text("View Feddback",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 18),)),
+                    decoration: BoxDecoration(color: Color(0xffef9f9f),borderRadius: BorderRadius.circular(10)),
+                  ),
+                ),
+              ),
 
               Container(
                 margin: EdgeInsets.all(10),
@@ -184,7 +201,10 @@ class _ShopHomePageState extends State<ShopHomePage> {
 
                   ],
                 ),
-              )
+              ),
+
+
+
 
             ],
           ),

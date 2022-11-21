@@ -71,9 +71,7 @@ class _ViewAllOrdersTailorState extends State<ViewAllOrdersTailor> {
                             type: snapshot.data!.docs[index]['type'],
                             category: snapshot.data!.docs[index]['category'],
                             phone: snapshot.data!.docs[index]['userphone'],
-                            neckdesign: snapshot.data!.docs[index]['neckdesign'],
-                            wristdesign: snapshot.data!.docs[index]['wristdesign'],
-                            collardesign: snapshot.data!.docs[index]['collardesign'],
+
                             designimgurl: snapshot.data!.docs[index]['designimgurl'],
                             stitchingprice: snapshot.data!.docs[index]['stitchingprice'],
                             measurement: snapshot.data!.docs[index]['measurement'],
@@ -179,59 +177,7 @@ class _ViewAllOrdersTailorState extends State<ViewAllOrdersTailor> {
                         Text(snapshot.data!.docs[index]['username'].toString()),
                         subtitle:
                         Text(snapshot.data!.docs[index]['category'].toString()),
-                        trailing: snapshot.data!.docs[index]['workcomplete']==1?InkWell(
-                          onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>ViewOrderDetails(
-                              shopid:  snapshot.data!.docs[index]['shopid'],
-                              dboyassigned: snapshot.data!
-                                  .docs[index]['dboyassigned'],
-                              dboyid: snapshot.data!.docs[index]
-                              ['dboyid'],
-                              bookingid:snapshot.data!.docs[index]['bookingid'].toString() ,
-                              name: snapshot.data!.docs[index]['username'],
-                              type: snapshot.data!.docs[index]['type'],
-                              category: snapshot.data!.docs[index]['category'],
-                              phone: snapshot.data!.docs[index]['userphone'],
-                              neckdesign: snapshot.data!.docs[index]['neckdesign'],
-                              wristdesign: snapshot.data!.docs[index]['wristdesign'],
-                              collardesign: snapshot.data!.docs[index]['collardesign'],
-                              designimgurl: snapshot.data!.docs[index]['designimgurl'],
-                              stitchingprice: snapshot.data!.docs[index]['stitchingprice'],
-                              measurement: snapshot.data!.docs[index]['measurement'],
-                              shoporpickup: snapshot.data!.docs[index]['shoporpickup'],
-                              pickupaddress: snapshot.data!.docs[index]['pickupaddress'],
-                              pickuplocation: snapshot.data!.docs[index]['pickuplocation'],
-                              pickuppin: snapshot.data!.docs[index]['pickuppin'],
-                              pickupdate: snapshot.data!.docs[index]['pickupdate'],
-                              materialprice: snapshot.data!.docs[index]['materialprice'],
-                              fabricid: snapshot.data!.docs[index]['fabricid'],
-                              fabrictype: snapshot.data!.docs[index]['fabrictype'],
-                              paymentmode: snapshot.data!.docs[index]['paymentmode'],
-                              totalprice: snapshot.data!.docs[index]['totalprice'],
-                              deliveryaddress: snapshot.data!.docs[index]['deliveryaddress'],
-                              deliverylocation: snapshot.data!.docs[index]['deliverylocation'],
-                              deliverypin: snapshot.data!.docs[index]['deliverypin'],
-                              deliverydate: snapshot.data!.docs[index]['deliverydate'],
-                              status: snapshot.data!.docs[index]['status'],
-                              confirmstatus:   snapshot.data!.docs[index]['confirmstatus'],
-                              tailorassigned: snapshot.data!.docs[index]['tailorassigned'],
-                              workcomplete: snapshot.data!.docs[index]['workcomplete'],
-                              materialpicked: snapshot.data!.docs[index]['materialpicked'],
-                              cancelled: snapshot.data!.docs[index]['cancelled'],
-                              deliverystatus:snapshot.data!.docs[index]['deliverystatus'],
-                              amountreceived:snapshot.data!.docs[index]['amountreceived'],
-                              remarks:snapshot.data!.docs[index]['remarks'],
 
-
-                            )));
-                          },
-                          child: Container(
-                            height: 35,
-                            width: 100,
-                            color: Colors.blueGrey,
-                            child: Center(child: Text("View Details",style: TextStyle(color: Colors.white),)),
-                          ),
-                        ):SizedBox.shrink(),
                       ),
 
 

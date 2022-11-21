@@ -104,34 +104,7 @@ class _MyOrderDetailsState extends State<MyOrderDetails> {
 
               ),
 
-              Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.all(10),
-                color: Color(0xfffad4d4),
-                child: Center(child:
-                widget.neckdesign!=null?
-                Text("Neck Style : "+widget.neckdesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),): Text("Neck Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),
 
-              ),
-
-              Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.all(10),
-                color: Color(0xfffad4d4),
-                child: Center(child:widget.wristdesign!=null? Text("Wrist Style : "+widget.wristdesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),):Text("Wrist Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),),
-
-
-
-              Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.all(10),
-                color: Color(0xfffad4d4),
-                child: Center(child:widget.collardesign!=null? Text("Collar Style : "+widget.collardesign.toString(),style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),):Text("Collar Style : Not Selected ",style: TextStyle(color:Colors.black,fontWeight: FontWeight.w400,fontSize: 16),)),
-
-              ),
               Container(
                 height: 50,
                 width: MediaQuery.of(context).size.width,
@@ -273,54 +246,12 @@ class _MyOrderDetailsState extends State<MyOrderDetails> {
               SizedBox(height: 50,),
 
 
-              // widget.status!=1?
-              //
-              //
-              // InkWell(
-              //   onTap: (){
-              //
-              //     print(widget.bookingid);
-              //
-              //     setState(() {
-              //       confirmedstatus=true;
-              //     });
-              //
-              //
-              //     FirebaseFirestore.instance.collection('booking').doc(widget.bookingid).update({
-              //
-              //       'confirmstatus':1
-              //
-              //     }).then((value){
-              //
-              //       Navigator.pop(context);
-              //
-              //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Order Confirmed")));
-              //
-              //     });
-              //
-              //   },
-              //
-              //   child: Container(
-              //     color: btncolor,
-              //     height: 45,
-              //     width: 100,
-              //     child: Center(child: AppText(text: "Confirm",color: Colors.white,),),
-              //   ),
-              //
-              // ):Text(
-              //   "Already Confirmed",
-              //   style: TextStyle(
-              //       color: Colors.black,
-              //       fontWeight: FontWeight.w400,
-              //       fontSize: 16),
-              // ),SizedBox(height: 10,),
-
 
 
               (widget.cancelled!=1 && widget.confirmstatus==1)?Text("Order Confirmed"):
 
 
-              (widget.cancelled!=0 && widget.confirmstatus!=0)? InkWell(
+              (widget.cancelled!=1 && widget.confirmstatus==0)? InkWell(
                 onTap: (){
 
                   print(widget.bookingid);
